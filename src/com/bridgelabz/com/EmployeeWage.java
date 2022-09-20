@@ -4,33 +4,32 @@ import java.util.*;
 
 public class EmployeeWage {
 	/*
-	 * Add Part time Employee & Wage by assuming part time hours is 8
+	 * solving using switch case
 	 */
 	public static void main(String[] args) {
+
+		System.out.println("Welcome to Employee Wage Computation Program");
+
+		Random random = new Random();
 
 		int fullDayHours = 8;
 		int wagePerHours = 20;
 		int halfdayHours = 4;
 		int salary = 0;
 
-		System.out.println("Welcome to Employee Wage Computation Program");
+		int randomNumber = random.nextInt(3); // will give 0 ,1 and 2 random number
 
-		Random random = new Random();
-
-		int randomNumber = random.nextInt(3); // will give 0 or 1 random number
-
-		if (randomNumber == 1) { // condition for present or absent
-			System.out.println("EMPLOYEE IS PRESENT");
+		switch (randomNumber) {
+		case 0:
+			System.out.println("EMPLOYEE IS ABSENT"); // random number will be o then employee is absent
+			break;
+		case 1:
 			salary = fullDayHours * wagePerHours; // if employee is present than his salary will be
+			break;
+		case 2:
+			salary = wagePerHours * halfdayHours; // condition for half day
 
-		} else if (randomNumber == 2) // condition for half day
-
-		{
-			salary = wagePerHours * halfdayHours;
 		}
-
-		else
-			System.out.println("EMPLOYEE IS ABSENT");
 		System.out.println("Total salary of employee is : " + salary);
 
 	}
