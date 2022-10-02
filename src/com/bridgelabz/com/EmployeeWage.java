@@ -4,13 +4,8 @@ import java.util.*;
 
 public class EmployeeWage {
 	/*
-	 * Calculate Wages till a condition of total working hours or days is reached
-	 * for a month assuming 100 hours and 20day
+	 *  Refactor the Code to write a Class Method to Compute Employee Wage
 	 */
-
-	public static void main(String[] args) {
-
-		System.out.println("Welcome to Employee Wage Computation Program");
 
 		Random random = new Random();
 
@@ -22,6 +17,8 @@ public class EmployeeWage {
 		int salary = 0;
 		int day = 0;
 		int monthlyHours = 0;
+		
+		public void wage() {
 
 		while (day != 20 && monthlyHours != 100)// condition till working hours reaches for month
 		{
@@ -49,3 +46,4 @@ public class EmployeeWage {
 		System.out.println("Monthly Salary: " + monthlySalary);
 	}
 }
+
